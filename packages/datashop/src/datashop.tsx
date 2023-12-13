@@ -3,7 +3,7 @@ import "./index.scss";
 
 const Datashop = ({ dispatch }) => (
   <div className="dashboard">
-    <p>Remote Dashboard</p>
+    <p>Remote Datashop</p>
     <button
       onClick={() => {
         dispatch({
