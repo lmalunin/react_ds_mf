@@ -1,5 +1,5 @@
 {
-  "name": "header",
+  "name": "@datashop/header",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",

@@ -1,17 +1,27 @@
 {
-  "name": "frontend",
+  "name": "@datashop/monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "host start": "set PORT=3000 & npm run start -w @datashop/host",
+    "store start": "set PORT=3001 & npm run start -w @datashop/store",
+    "header start": "set PORT=3002 & npm run start -w @datashop/header",
+    "datashop start": "set PORT=3003 & npm run start -w @datashop/datashop",
+    "algopack start": "set PORT=3004 & npm run start -w @datashop/algopack",
+    "update libs": "npm run build -w @datashop/libs",
+    "lint": "eslint --ignore-path .eslintignore --ext .js,.ts,.tsx",
+    "lint fix": "eslint --fix packages",
+    "format": "prettier . --write"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "workspaces": [
-    "packages/*"
-  ],
+
   "dependencies": {
     "@babel/runtime": "^7.13.10",
     "@testing-library/jest-dom": "^5.17.0",
@@ -38,7 +48,8 @@
     "html-webpack-plugin": "^5.3.2",
     "postcss": "^8.2.1",
     "postcss-loader": "^4.1.0",
-    "style-loader": "^3.3.0"
+    "style-loader": "^3.3.0",
+    "lerna": "^8.0.0"
   },
   "eslintConfig": {
     "extends": [

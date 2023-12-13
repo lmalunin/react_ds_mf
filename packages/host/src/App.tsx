@@ -1,13 +1,13 @@
+import "./index.scss";
+
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
-import { useStore, StoreProvider } from "store/store";
 
-import "./index.scss";
+import { useStore, StoreProvider } from "store/store";
 import ErrorBoundary from "./ErrorBoundary";
-import { useStore } from "store/src/store";
 import Header from "header/Header";
-import Datashop from "header/Datashop";
-import Algopack from "header/Algopack";
+import Datashop from "datashop/Datashop";
+import Algopack from "algopack/Algopack";
 
 const App = () => {
   const [store, dispatch] = useStore();
@@ -20,10 +20,10 @@ const App = () => {
         <Header count={store.count} />
       </ErrorBoundary>
       <ErrorBoundary>
-        <Datashop dispatch={dispatch} />
+        {/*<Datashop dispatch={dispatch} />*/}
       </ErrorBoundary>
       <ErrorBoundary>
-        <Algopack dispatch={dispatch} />
+        {/*<Algopack dispatch={dispatch} />*/}
       </ErrorBoundary>
       <footer>
         <p>Host Footer</p>

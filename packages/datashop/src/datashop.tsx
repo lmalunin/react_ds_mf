@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
 
-const Dashboard = ({ dispatch }) => (
+const Datashop = ({ dispatch }) => (
   <div className="dashboard">
     <p>Remote Dashboard</p>
     <button
@@ -16,4 +16,4 @@ const Dashboard = ({ dispatch }) => (
   </div>
 );
 
-export default Dashboard;
+export default Datashop;
