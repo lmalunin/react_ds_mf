@@ -20,10 +20,10 @@ const App = () => {
         <Header count={store.count} />
       </ErrorBoundary>
       <ErrorBoundary>
-        {/*<Datashop dispatch={dispatch} />*/}
+        <Datashop dispatch={dispatch} />
       </ErrorBoundary>
       <ErrorBoundary>
-        {/*<Algopack dispatch={dispatch} />*/}
+        <Algopack dispatch={dispatch} />
       </ErrorBoundary>
       <footer>
         <p>Host Footer</p>

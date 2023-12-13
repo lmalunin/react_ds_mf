@@ -46,8 +46,8 @@ module.exports = (_, argv) => ({
       remotes: {
         store: 'store@http://localhost:3001/remoteEntry.js',
         header: 'header@http://localhost:3002/remoteEntry.js',
-        datashop: 'dashboard@http://localhost:3003/remoteEntry.js',
-        algopack: 'dashboard@http://localhost:3004/remoteEntry.js',
+        datashop: 'datashop@http://localhost:3003/remoteEntry.js',
+        algopack: 'algopack@http://localhost:3004/remoteEntry.js',
       },
       exposes: {},
       shared: {
