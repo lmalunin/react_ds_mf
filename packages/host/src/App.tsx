@@ -17,13 +17,13 @@ const App = () => {
       <p><b>Host App</b></p>
       <p>The app will not gonna work without store</p>
       <ErrorBoundary>
-        <Header count={store.count} />
+        <Header count={store.count} dispatch={dispatch}/>
       </ErrorBoundary>
       <ErrorBoundary>
-        <Datashop dispatch={dispatch} />
+        <Datashop dispatch={dispatch}/>
       </ErrorBoundary>
       <ErrorBoundary>
-        <Algopack dispatch={dispatch} />
+        <Algopack dispatch={dispatch}/>
       </ErrorBoundary>
       <footer>
         <p>Host Footer</p>
@@ -44,7 +44,7 @@ const App = () => {
 ReactDOM.render(
   <Suspense fallback={<div>Loading...</div>}>
     <StoreProvider>
-      <App />
+      <App/>
     </StoreProvider>
   </Suspense>,
   document.getElementById("app")
