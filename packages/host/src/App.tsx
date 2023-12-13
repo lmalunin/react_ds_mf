@@ -1,14 +1,51 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
+import { useStore, StoreProvider } from "store/store";
 
-import "./index.css";
+import "./index.scss";
+import ErrorBoundary from "./ErrorBoundary";
+import { useStore } from "store/src/store";
+import Header from "header/Header";
+import Datashop from "header/Datashop";
+import Algopack from "header/Algopack";
 
-const App = () => (
-  <div className="container">
-    <div>Name: host</div>
-    <div>Framework: react</div>
-    <div>Language: TypeScript</div>
-    <div>CSS: Empty CSS</div>
-  </div>
+const App = () => {
+  const [store, dispatch] = useStore();
+
+  return (
+    <div>
+      <p><b>Host App</b></p>
+      <p>The app will not gonna work without store</p>
+      <ErrorBoundary>
+        <Header count={store.count} />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Datashop dispatch={dispatch} />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Algopack dispatch={dispatch} />
+      </ErrorBoundary>
+      <footer>
+        <p>Host Footer</p>
+        <button
+          onClick={() => {
+            dispatch({
+              type: "decrement",
+            });
+          }}
+        >
+          Decrement
+        </button>
+      </footer>
+    </div>
+  );
+};
+
+ReactDOM.render(
+  <Suspense fallback={<div>Loading...</div>}>
+    <StoreProvider>
+      <App />
+    </StoreProvider>
+  </Suspense>,
+  document.getElementById("app")
 );
-ReactDOM.render(<App />, document.getElementById("app"));

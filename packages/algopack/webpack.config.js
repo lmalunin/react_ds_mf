@@ -46,7 +46,7 @@ module.exports = (_, argv) => ({
       remotes: {},
       exposes: {
         "./App": "./src/App",
-        "./Algopack": "./src/Algopack",
+        "./Algopack": "./src/algopack",
       },
       shared: {
         ...deps,
