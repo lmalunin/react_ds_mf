@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.scss";
-import addNumbers from "@datashop/libs/src";
+import addNumbers from "@workspace/libs/src";
 
 const Datashop = ({ dispatch }) => (
   <div className="dashboard">

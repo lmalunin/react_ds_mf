@@ -1,5 +1,5 @@
 {
-  "name": "@datashop/datashop",
+  "name": "@workspace/datashop",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",

@@ -1,5 +1,5 @@
 {
-  "name": "@datashop/monorepo",
+  "name": "@workspace/monorepo",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -8,11 +8,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "host start": "set PORT=3000 & npm run start -w @datashop/host",
-    "store start": "set PORT=3001 & npm run start -w @datashop/store",
-    "header start": "set PORT=3002 & npm run start -w @datashop/header",
-    "datashop start": "set PORT=3003 & npm run start -w @datashop/datashop",
-    "algopack start": "set PORT=3004 & npm run start -w @datashop/algopack",
+    "host start": "set PORT=3000 & npm run start -w @workspace/host",
+    "store start": "set PORT=3001 & npm run start -w @workspace/store",
+    "header start": "set PORT=3002 & npm run start -w @workspace/header",
+    "datashop start": "set PORT=3003 & npm run start -w @workspace/datashop",
+    "algopack start": "set PORT=3004 & npm run start -w @workspace/algopack",
     "update libs": "npm run build -w @datashop/libs",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts,.tsx",
     "lint fix": "eslint --fix packages",
