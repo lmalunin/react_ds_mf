@@ -11,4 +11,4 @@ const App = () => (
     <div>SCSS: Empty SCSS</div>
   </div>
 );
-ReactDOM.render(<App />, document.getElementById("app"));
+export default App;

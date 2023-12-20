@@ -1,9 +1,11 @@
 import React from "react";
 import "./index.scss";
+import addNumbers from "@datashop/libs/src";
 
 const Datashop = ({ dispatch }) => (
   <div className="dashboard">
     <p>Remote Datashop</p>
+    {addNumbers(5, 6)}
     <button
       onClick={() => {
         dispatch({

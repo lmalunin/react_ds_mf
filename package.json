@@ -49,6 +49,7 @@
     "lerna": "^8.0.0",
     "postcss": "^8.2.1",
     "postcss-loader": "^4.1.0",
+    "sass": "^1.69.5",
     "style-loader": "^3.3.0"
   },
   "eslintConfig": {
