@@ -41,14 +41,8 @@ module.exports = function override( config ) {
           },
         },
       }),
-      new HtmlWebPackPlugin({
-        template: "./src/index.html",
-      }),
     ),
   );
-
-  config.output.publicPath = "auto";
-  removeModuleScopePlugin()(config);
 
   aliasDangerous({
     ...configPaths("tsconfig.paths.json"),
