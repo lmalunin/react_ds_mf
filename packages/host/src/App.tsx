@@ -2,22 +2,33 @@ import "./index.scss";
 
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
+import { Provider, useDispatch, useSelector } from "react-redux";
 
-import { useStore, StoreProvider } from "store/store";
+
 import ErrorBoundary from "./ErrorBoundary";
+import { store } from "@workspace/store/src/store";
 import Header from "header/Header";
 import Datashop from "datashop/Datashop";
 import Algopack from "algopack/Algopack";
 
 const App = () => {
-  const [store, dispatch] = useStore();
+  const dispatch = useDispatch()
+  //const [store, dispatch] = useStore();
+
+  const countSelector = useSelector((state: any) => {
+
+    console.log(state.count)
+
+    return state.count;
+  });
+
 
   return (
     <div>
       <p><b>Host App</b></p>
       <p>The app will not gonna work without store</p>
       <ErrorBoundary>
-        <Header count={store.count} dispatch={dispatch}/>
+        <Header count={countSelector.count} dispatch={dispatch}/>
       </ErrorBoundary>
       <ErrorBoundary>
         <Datashop dispatch={dispatch}/>
@@ -43,9 +54,9 @@ const App = () => {
 
 ReactDOM.render(
   <Suspense fallback={<div>Loading...</div>}>
-    <StoreProvider>
+    <Provider store={store}>
       <App/>
-    </StoreProvider>
+    </Provider>
   </Suspense>,
   document.getElementById("app")
 );

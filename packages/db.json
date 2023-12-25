@@ -1,0 +1,75 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "firstUser",
+      "email": "firstUser@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "secondUser",
+      "email": "secondUser@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "thirdUser",
+      "email": "thirdUser@gmail.com"
+    }
+  ],
+  "datashop": {
+    "products": [
+      {
+        "id": 1,
+        "name": "Trade Stats"
+      },
+      {
+        "id": 2,
+        "name": "Requests"
+      },
+      {
+        "id": 3,
+        "name": "Orders"
+      },
+      {
+        "id": 4,
+        "name": "Byd"
+      },
+      {
+        "id": 5,
+        "name": "Stats"
+      },
+      {
+        "id": 6,
+        "name": "Stack"
+      }
+    ]
+  },
+  "algopack": {
+    "data": [
+      {
+        "id": "1",
+        "name": "item1"
+      },
+      {
+        "id": "2",
+        "name": "item2"
+      },
+      {
+        "id": "3",
+        "name": "item3"
+      },
+      {
+        "id": "4",
+        "name": "item4"
+      },
+      {
+        "id": "5",
+        "name": "item5"
+      },
+      {
+        "id": "6",
+        "name": "item6"
+      }
+    ]
+  }
+}
