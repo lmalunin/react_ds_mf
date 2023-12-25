@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.scss";
+import { increment } from "@workspace/store/src/slices/count.slice";
 
 const Header = ({ dispatch, count = 0 }) => {
   return (
@@ -7,9 +8,7 @@ const Header = ({ dispatch, count = 0 }) => {
       <p>Remote Header / count: {count}</p>
       <button
         onClick={() => {
-          dispatch({
-            type: "increment",
-          });
+          dispatch(increment(1));
         }}
       >Increment
       </button>

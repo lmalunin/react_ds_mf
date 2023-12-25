@@ -10,15 +10,12 @@ import { store } from "@workspace/store/src/store";
 import Header from "header/Header";
 import Datashop from "datashop/Datashop";
 import Algopack from "algopack/Algopack";
+import { decrement } from "@workspace/store/src/slices/count.slice";
 
 const App = () => {
   const dispatch = useDispatch()
-  //const [store, dispatch] = useStore();
 
   const countSelector = useSelector((state: any) => {
-
-    console.log(state.count)
-
     return state.count;
   });
 
@@ -40,9 +37,7 @@ const App = () => {
         <p>Host Footer</p>
         <button
           onClick={() => {
-            dispatch({
-              type: "decrement",
-            });
+            dispatch(decrement(1));
           }}
         >
           Decrement

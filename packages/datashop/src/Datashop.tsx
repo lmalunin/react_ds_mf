@@ -2,6 +2,7 @@ import React from "react";
 import "./index.scss";
 import addNumbers from "@workspace/libs/src";
 import { Somecomponent } from '@workspace/libs/src/somecomponent'
+import { increment } from "@workspace/store/src/slices/count.slice";
 
 const Datashop = ({ dispatch }) => (
   <div className="dashboard">
@@ -12,9 +13,7 @@ const Datashop = ({ dispatch }) => (
     <br/>
     <button
       onClick={() => {
-        dispatch({
-          type: "increment",
-        });
+        dispatch(increment(2));
       }}
     >
       Increment

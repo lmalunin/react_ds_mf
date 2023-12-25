@@ -8,12 +8,10 @@ const countSlice = createSlice({
   initialState,
   reducers: {
     increment(state, action) {
-      debugger
-      state.count = state.count + 1;
+      state.count = state.count + action.payload;
       return
     },
     decrement(state, action) {
-      debugger
       state.count = state.count - 1;
       return
     },

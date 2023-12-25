@@ -7,7 +7,7 @@ const Datashop = ({ dispatch }) => (
     <p>Remote Algopack</p>
     <button
       onClick={() => {
-        dispatch(increment(1));
+        dispatch(increment(5));
       }}
     >
       Increment
