@@ -19,6 +19,11 @@ const App = () => {
     return state.count;
   });
 
+  const usersSelector = useSelector((state: any) => {
+    console.log('state.users', state.users)
+    return state.users;
+  })
+
 
   return (
     <div>

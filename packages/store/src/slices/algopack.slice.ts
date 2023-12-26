@@ -6,7 +6,7 @@ const datashopSlice = createSlice(
     initialState: {},
     reducers: {
       addItem(state, action) {
-        state.push(action.payload)
+        //state.push(action.payload)
       }
     }
   }
