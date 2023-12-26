@@ -17,7 +17,9 @@ import reportWebVitals from "./reportWebVitals";
 const App = () => {
   const dispatch = useDispatch()
 
-  const countSelector = useSelector((state: any) => {
+
+  /*Destructing alias*/
+  const { isLoading, data: countData, error: countError } = useSelector((state: any) => {
     return state.count;
   });
 
@@ -32,7 +34,7 @@ const App = () => {
       <p><b>Host App</b></p>
       <p>The app will not gonna work without store</p>
       <ErrorBoundary>
-        <Header count={countSelector.data} dispatch={dispatch} users={usersSelector.data}/>
+        <Header count={countData} dispatch={dispatch} users={usersSelector.data}/>
       </ErrorBoundary>
       <ErrorBoundary>
         <Datashop dispatch={dispatch}/>
