@@ -18,9 +18,9 @@ export type AppDispatch = typeof store.dispatch
 const App = () => {
   const dispatch = useDispatch<AppDispatch>()
 
-  useEffect(() => {
-    dispatch(fetchUsersThunk())
-  }, [])
+  // useEffect(() => {
+  //   dispatch(fetchUsersThunk())
+  // }, [])
 
   /*Destructing alias*/
   const { data: countData } = useSelector((state: any) => {
