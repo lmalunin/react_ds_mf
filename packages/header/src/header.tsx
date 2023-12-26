@@ -5,9 +5,9 @@ import { fetchUsersThunk } from "@workspace/store/src/thunks/fetch-users.thunk";
 
 const Header = ({ dispatch, count = 0, users = [] }) => {
 
-  useEffect(() => {
-    dispatch(fetchUsersThunk())
-  }, [])
+  /*  useEffect(() => {
+      dispatch(fetchUsersThunk())
+    }, [])*/
 
   return (
     <header>

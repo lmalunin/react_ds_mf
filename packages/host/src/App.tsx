@@ -1,29 +1,32 @@
 import "./index.scss";
 
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { Provider, useDispatch, useSelector } from "react-redux";
 
 
 import ErrorBoundary from "./ErrorBoundary";
-import { store } from "@workspace/store/src/store";
+import { fetchUsersThunk, store } from "@workspace/store/src/store";
 import Header from "header/Header";
 import Datashop from "datashop/Datashop";
 import Algopack from "algopack/Algopack";
 import { decrement } from "@workspace/store/src/slices/count.slice";
 import reportWebVitals from "./reportWebVitals";
 
-
+export type AppDispatch = typeof store.dispatch
 const App = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch<AppDispatch>()
 
+  useEffect(() => {
+    dispatch(fetchUsersThunk())
+  }, [])
 
   /*Destructing alias*/
-  const { isLoading: isCountLoading, data: countData, error: countError } = useSelector((state: any) => {
+  const { data: countData } = useSelector((state: any) => {
     return state.count;
   });
 
-  const usersSelector = useSelector((state: any) => {
+  const { isLoading: isUsersLoading, data: usersData, error: usersError } = useSelector((state: any) => {
     //console.log('state.users', state.users)
     return state.users;
   })
@@ -34,10 +37,10 @@ const App = () => {
       <p><b>Host App</b></p>
       <p>The app will not gonna work without store</p>
 
-      <div>isCountLoading:{isCountLoading ? 'true' : 'false'}</div>
+      <div>isUsersLoading: {isUsersLoading ? 'true' : 'false'}</div>
 
       <ErrorBoundary>
-        <Header count={countData} dispatch={dispatch} users={usersSelector.data}/>
+        <Header count={countData} dispatch={dispatch} users={usersData}/>
       </ErrorBoundary>
       <ErrorBoundary>
         <Datashop dispatch={dispatch}/>
