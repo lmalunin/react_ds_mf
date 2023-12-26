@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
 import "./index.scss";
+
+//dynamic store - static store
 import { increment } from "@workspace/store/src/slices/count.slice";
+//import { increment } from "@workspace/store_static/slices/count.slice";
 import { fetchUsersThunk } from "@workspace/store/src/thunks/fetch-users.thunk";
+//import { fetchUsersThunk } from "@workspace/store_static/thunks/fetch-users.thunk";
 
 const Header = ({ dispatch, count = 0, users = [] }) => {
 

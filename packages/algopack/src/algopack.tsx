@@ -1,6 +1,9 @@
 import React from "react";
 import "./index.scss";
+
+//dynamic store - static store
 import { increment } from "@workspace/store/src/slices/count.slice";
+//import { increment } from "@workspace/store_static/slices/count.slice";
 
 type AAA = { n: number }
 
