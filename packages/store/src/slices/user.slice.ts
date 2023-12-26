@@ -16,7 +16,7 @@ const initialState = {
 
 const usersSlice = createSlice({
   name: 'users',
-  initialState,
+  initialState: initialState,
   reducers: {},
   extraReducers(builder) {
     builder.addCase(fetchUsersThunk.pending, (state, action) => {
@@ -40,7 +40,7 @@ const usersSlice = createSlice({
 
     builder.addCase(addUserThunk.fulfilled, (state, action) => {
       state.isLoading = false;
-      state.data.push(action.payload);
+      //state.data.push(action.payload);
     });
 
     builder.addCase(addUserThunk.rejected, (state, action) => {
