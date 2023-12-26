@@ -6,7 +6,8 @@ import { Provider, useDispatch, useSelector } from "react-redux";
 
 
 import ErrorBoundary from "./ErrorBoundary";
-import { fetchUsersThunk, store } from "@workspace/store/src/store";
+//import { fetchUsersThunk, store } from "@workspace/store/src/store";
+import { fetchUsersThunk, store } from "store/store";
 import Header from "header/Header";
 import Datashop from "datashop/Datashop";
 import Algopack from "algopack/Algopack";

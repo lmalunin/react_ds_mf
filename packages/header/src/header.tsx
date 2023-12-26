@@ -11,7 +11,7 @@ const Header = ({ dispatch, count = 0, users = [] }) => {
 
   return (
     <header>
-      <p>Remote Header / count: {count}</p>
+      <h3>Remote Header / count: {count}</h3>
       <button
         onClick={() => {
           dispatch(increment(1));
@@ -25,6 +25,8 @@ const Header = ({ dispatch, count = 0, users = [] }) => {
           <div key={user.id}>{user.name}</div>
         )
       })}
+      <br/>
+      <span>----------------------------------------</span>
     </header>
   );
 }

@@ -2,14 +2,14 @@ import { createSlice } from "@reduxjs/toolkit";
 import { fetchUsersThunk } from "../thunks/fetch-users.thunk";
 import { addUserThunk } from "../thunks/add-user.thunk";
 
-// interface UserState {
+// type UserState = {
 //   data: { id: number, name: string }[]
 //   isLoading: boolean
 //   error: any
 // }
 
 const initialState = {
-  data: new Array().fill(0),
+  data: [],
   isLoading: false,
   error: {}
 };
