@@ -13,6 +13,7 @@ import Algopack from "algopack/Algopack";
 import { decrement } from "@workspace/store/src/slices/count.slice";
 import reportWebVitals from "./reportWebVitals";
 
+//https://stackoverflow.com/questions/68812319/redux-toolkit-argument-of-type-asyncthunkaction-is-not-assignable-to-param
 export type AppDispatch = typeof store.dispatch
 const App = () => {
   const dispatch = useDispatch<AppDispatch>()
