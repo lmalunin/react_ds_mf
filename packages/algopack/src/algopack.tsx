@@ -2,17 +2,31 @@ import React from "react";
 import "./index.scss";
 import { increment } from "@workspace/store/src/slices/count.slice";
 
-const Datashop = ({ dispatch }) => (
-  <div className="dashboard">
-    <p>Remote Algopack</p>
-    <button
-      onClick={() => {
-        dispatch(increment(5));
-      }}
-    >
-      Increment
-    </button>
-  </div>
-);
+type AAA = { n: number }
 
-export default Datashop;
+const Algopack = ({ dispatch }) => {
+
+  const BBB: AAA = { n: 5 }
+
+  return (
+    <div className="dashboard">
+
+      <h3>Remote Algopack</h3>
+
+      Algopack BBB:{BBB.n}
+      <br/>
+      <br/>
+      <button
+        onClick={() => {
+          dispatch(increment(5));
+        }}
+      >
+        Increment
+      </button>
+      <br/>
+      <span>----------------------------------------</span>
+    </div>
+  );
+}
+
+export default Algopack;

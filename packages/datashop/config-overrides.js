@@ -27,7 +27,7 @@ module.exports = function override( config ) {
         remotes: {},
         exposes: {
           "./App": "./src/App",
-          "./Datashop": "./src/Datashop",
+          "./Datashop": "./src/datashop",
         },
         shared: {
           ...dependencies,
