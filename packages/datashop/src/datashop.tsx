@@ -7,27 +7,30 @@ import { Somecomponent } from '@workspace/libs/src/somecomponent'
 import { increment } from "@workspace/store/src/slices/count.slice";
 //import { increment } from "@workspace/store_static/slices/count.slice";
 
-const Datashop = ({ dispatch }) => (
-  <div className="dashboard">
-    <h3>Remote Datashop</h3>
+const Datashop = ({ dispatch }) => {
 
-    someInterfaceObject: {someInterfaceObject.x}
-    <br/>
+  return (
+    <div className="dashboard">
+      <h3>Remote Datashop</h3>
 
-    5+7={addNumbers(5, 7)}
-    <br/>
-    <Somecomponent title={'123'}/>
-    <br/>
-    <button
-      onClick={() => {
-        dispatch(increment(2));
-      }}
-    >
-      Increment
-    </button>
-    <br/>
-    <span>----------------------------------------</span>
-  </div>
-);
+      someInterfaceObject: {someInterfaceObject.x}
+      <br/>
+
+      5+7={addNumbers(5, 7)}
+      <br/>
+      <Somecomponent title={'123'}/>
+      <br/>
+      <button
+        onClick={() => {
+          dispatch(increment(2));
+        }}
+      >
+        Increment
+      </button>
+      <br/>
+      <span>----------------------------------------</span>
+    </div>
+  );
+}
 
 export default Datashop;
