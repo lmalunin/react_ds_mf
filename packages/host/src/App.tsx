@@ -19,7 +19,7 @@ const App = () => {
 
 
   /*Destructing alias*/
-  const { isLoading, data: countData, error: countError } = useSelector((state: any) => {
+  const { isLoading: isCountLoading, data: countData, error: countError } = useSelector((state: any) => {
     return state.count;
   });
 
@@ -33,6 +33,9 @@ const App = () => {
     <div>
       <p><b>Host App</b></p>
       <p>The app will not gonna work without store</p>
+
+      <div>isCountLoading:{isCountLoading ? 'true' : 'false'}</div>
+
       <ErrorBoundary>
         <Header count={countData} dispatch={dispatch} users={usersSelector.data}/>
       </ErrorBoundary>
