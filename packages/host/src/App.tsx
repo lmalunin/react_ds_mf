@@ -20,7 +20,7 @@ const App = () => {
   });
 
   const usersSelector = useSelector((state: any) => {
-    console.log('state.users', state.users)
+    //console.log('state.users', state.users)
     return state.users;
   })
 
@@ -30,7 +30,7 @@ const App = () => {
       <p><b>Host App</b></p>
       <p>The app will not gonna work without store</p>
       <ErrorBoundary>
-        <Header count={countSelector.count} dispatch={dispatch}/>
+        <Header count={countSelector.data} dispatch={dispatch} users={usersSelector.data}/>
       </ErrorBoundary>
       <ErrorBoundary>
         <Datashop dispatch={dispatch}/>
