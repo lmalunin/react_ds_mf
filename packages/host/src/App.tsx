@@ -38,6 +38,7 @@ const App = () => {
       <p>The app will not gonna work without store</p>
 
       <div>isUsersLoading: {isUsersLoading ? 'true' : 'false'}</div>
+      <div>usersError: {JSON.stringify(usersError)}</div>
 
       <ErrorBoundary>
         <Header count={countData} dispatch={dispatch} users={usersData}/>
