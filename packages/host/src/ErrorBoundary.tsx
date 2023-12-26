@@ -22,6 +22,7 @@ export default class ErrorBoundary extends React.Component {
       return <h1>Something went wrong.</h1>;
     }
 
-    return this.props.children;
+    /*https://stackoverflow.com/questions/71831601/ts2786-component-cannot-be-used-as-a-jsx-component*/
+    return <>{this.props.children}</>;
   }
 }
