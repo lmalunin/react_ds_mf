@@ -5,6 +5,7 @@ import "./index.scss";
 import { increment } from "@workspace/store/src/slices/count.slice";
 //import { increment } from "@workspace/store_static/slices/count.slice";
 import { fetchUsersThunk } from "@workspace/store/src/thunks/fetch-users.thunk";
+import { addUserThunk } from "@workspace/store/src/thunks/add-user.thunk";
 //import { fetchUsersThunk } from "@workspace/store_static/thunks/fetch-users.thunk";
 
 const Header = ({ dispatch, count = 0, users = [] }) => {
@@ -12,6 +13,10 @@ const Header = ({ dispatch, count = 0, users = [] }) => {
   useEffect(() => {
     dispatch(fetchUsersThunk())
   }, [])
+
+  const addUserHandler = () => {
+    dispatch(addUserThunk())
+  }
 
   return (
     <header>
@@ -29,6 +34,8 @@ const Header = ({ dispatch, count = 0, users = [] }) => {
           <div key={user.id}>{user.name}</div>
         )
       })}
+      <br/>
+      <button onClick={addUserHandler}>add User</button>
       <br/>
       <span>----------------------------------------</span>
     </header>
