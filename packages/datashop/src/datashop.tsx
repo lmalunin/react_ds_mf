@@ -7,7 +7,7 @@ import { increment } from "@workspace/store/src/slices/count.slice";
 const Datashop = ({ dispatch }) => (
   <div className="dashboard">
     <h3>Remote Datashop</h3>
-    {addNumbers(5, 7)}
+    5+7={addNumbers(5, 7)}
     <br/>
     <Somecomponent title={'123'}/>
     <br/>
