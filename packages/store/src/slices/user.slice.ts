@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { fetchUsersThunk } from "../thunks/fetch-users.thunk";
 
 const usersSlice = createSlice({
-  name: 'user',
+  name: 'users',
   initialState: {
     data: [],
     isLoading: false,
