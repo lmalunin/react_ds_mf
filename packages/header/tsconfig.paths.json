@@ -4,6 +4,9 @@
     "paths": {
       "@libs": [
         "../libs"
+      ],
+      "@store": [
+        "../store"
       ]
     }
   }

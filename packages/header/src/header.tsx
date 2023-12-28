@@ -21,9 +21,9 @@ const Header = ({ dispatch, count = 0, users = [] }) => {
     doCreateUser()
   }
 
-  // const removeUser = (user: { id: number, name: string }) => {
-  //   dispatch(removeUserThunk(user))
-  // }
+  const removeUserHandler = (user: { id: number, name: string }) => {
+    dispatch(removeUserThunk(user))
+  }
 
   return (
     <header>
@@ -42,7 +42,7 @@ const Header = ({ dispatch, count = 0, users = [] }) => {
             <div style={{ marginRight: '10px' }}>
               {user.name}
             </div>
-            {/*<div onClick={() => removeUser(user)} style={{ cursor: 'pointer' }}>x</div>*/}
+            <div onClick={() => removeUserHandler(user)} style={{ cursor: 'pointer' }}>x</div>
           </div>
 
         )
