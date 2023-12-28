@@ -4,10 +4,8 @@ import "./index.scss";
 //dynamic store - static store
 import { increment } from "@workspace/store/src/slices/count.slice";
 //import { increment } from "@workspace/store_static/slices/count.slice";
-import { fetchUsersThunk } from "@workspace/store/src/thunks/fetch-users.thunk";
-import { addUserThunk } from "@workspace/store/src/thunks/add-user.thunk";
+import { addUserThunk, fetchUsersThunk, removeUserThunk } from "@workspace/store/src/thunks";
 import { useThunk } from "@workspace/libs/src/utils/thunk.utils";
-import { removeUserThunk } from "@workspace/store/src/thunks/remove-user.thunk";
 //import { fetchUsersThunk } from "@workspace/store_static/thunks/fetch-users.thunk";
 
 const Header = ({ dispatch, count = 0, users = [] }) => {
