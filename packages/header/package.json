@@ -2,7 +2,7 @@
   "name": "@workspace/header",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "react-app-rewired build --mode production",
     "build:dev": "webpack --mode development",
     "build:start": "cd dist && PORT=3003 npx serve",
     "start": "react-app-rewired start",
