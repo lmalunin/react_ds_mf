@@ -14,9 +14,13 @@ import { fetchUsersThunk, store } from "store/store";
 //static store, but won't work with types yet
 //import { fetchUsersThunk, store } from "@workspace/store_static/store";
 
-import Header from "header/Header";
-import Datashop from "datashop/Datashop";
-import Algopack from "algopack/Algopack";
+const Header = React.lazy(() => import('header/Header'));
+const Datashop = React.lazy(() => import('datashop/Datashop'));
+const Algopack = React.lazy(() => import('algopack/Algopack'));
+
+// import Header from "header/Header";
+// import Datashop from "datashop/Datashop";
+// import Algopack from "algopack/Algopack";
 import { decrement } from "@workspace/store/src/slices/count.slice";
 import reportWebVitals from "./reportWebVitals";
 
